@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>王者荣耀首页</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				
+			}
+			body{
+				background: #F8F8F8;
+			}
+			
+			.main {
+				width: 1200px;
+				margin: 0 auto;
+				line-height: 84px;
+			}
+			
+			.top {
+				height: 84px;
+				background-color: black;
+			}
+			
+			.main>img {
+				float: left;
+			}
+			
+			.top-nav {
+				float: left;
+				color: whitesmoke;
+				font-family: "微软雅黑";
+			}
+			
+			.top-nav-item {
+				float: left;
+				text-decoration: none;
+				color: white
+			}
+			
+			.top-nav-item-c1 {
+				width: 120px;
+				height: 22px;
+				line-height: 22px;
+				padding-top: 25px;
+				text-align: center;
+			}
+			
+			.top-nav-item-c2 {
+				margin-top: 2px;
+				height: 20px;
+				line-height: 20px;
+				padding-bottom: 15px;
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			.top-nav-item:hover {
+				background-color: rgba(243, 194, 88, 0.3);
+				height: 79px;
+				border-bottom: 5px solid orange;
+			}
+			
+			.big-img {
+				height: 817px;
+				background: url(img/bigImg.jpg);
+				position: relative;
+			}
+			
+			.big-bottom {
+				width: 1190px;
+				height: 298px;
+				background-color: rgba(0, 0, 0, 0.8);
+				position: absolute;
+				left: 350px;
+				bottom: 0;
+			}
+			
+			.bottom-lunbo {
+				width: 604px;
+				height: 298px;
+				animation: myAnimation 10s infinite;
+				float: left;
+			}
+			
+			@-webkit-keyframes myAnimation {
+				0% {
+					background: url(img/sqnxphfc.jpeg);
+				}
+				20% {
+					background: url(img/lxszdc.jpeg);
+				}
+				40% {
+					background: url(img/rymsnjj.jpeg);
+				}
+				60% {
+					background: url(img/jnfkjzt.jpeg);
+				}
+				80% {
+					background: url(img/hxlbsmd.jpeg);
+				}
+				100% {
+					background: url(img/sqnxphfc.jpeg);
+				}
+			}
+			
+			.news {
+				float: left;
+				width: 496px;
+				height: 298px;
+				color: white;
+			}
+			
+			.newsTitle {
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-family: "微软雅黑";
+				font-size: 20px;
+				color: #F3C258;
+			}
+			.newsSmall{
+				display: block;
+				padding: 5px 50px;
+				font-size: 14px;
+			}
+			.list-item{
+				margin-left: 9px;
+				width: 291px;
+				height: 134px;
+				float: left;
+				transition: all 3s;
+			}
+			.list-item:hover{
+				transform: scale(1.2);
+			}
+			.person-list{
+				margin-top: 20px;
+				height: 134px;
+				margin-left: 340px;
+			}
+			.bottom{
+				margin-top: 20px;
+				width: 1217px;
+				height: 231px;
+				background: url(img/bottom.png);
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--导航条-->
+		<div class="top">
+			<div class="main">
+				<img src="img/logo.png" />
+				<div class="top-nav">
+					<a href="home.html" class="top-nav-item">
+						<div class="top-nav-item-c1">官方网页</div>
+						<div class="top-nav-item-c2">HOME</div>
+					</a>
+					<a href="data.html" class="top-nav-item">
+						<div class="top-nav-item-c1">游戏资料</div>
+						<div class="top-nav-item-c2">DATA</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">内容中心</div>
+						<div class="top-nav-item-c2">CONTENTS</div>
+					</a>
+					<a href="match.html" class="top-nav-item">
+						<div class="top-nav-item-c1">赛事中心</div>
+						<div class="top-nav-item-c2">MATCH</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">百态王者</div>
+						<div class="top-nav-item-c2">CULTURE</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">社区互动</div>
+						<div class="top-nav-item-c2">COMMUNITY</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">玩家支持</div>
+						<div class="top-nav-item-c2">PLAYER</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="big-img">
+			<div class="big-bottom">
+				<!--图片轮播-->
+				<div class="bottom-lunbo">
+				</div>
+				<div class="news">
+					<div class="newsTitle">重大赛事</div>
+					<a class="newsSmall">【世冠今日预报】EDG.M vs Hero，“晋级”or“回家”四分之一决赛开战 </a>
+					<a class="newsSmall">虎牙明星大腿杯S2赛季全新升级，争锋相对谁能脱颖而出成为最强大腿 </a>
+					<a class="newsSmall">版本风向标！快来看看世冠职业选手在玩什么？ </a>
+					<a class="newsSmall">第七届城市赛省赛本周末正式打响，离全国总决赛更近一步！ </a>
+					<a class="newsSmall">第七届王者荣耀城市赛海选金牛黄忠站即将开战！ </a>
+					<a class="newsSmall">成功都是留给有准备的人，王者荣耀传奇选手Cat的崛起之路 </a>
+					<a class="newsSmall">世冠首周战果出炉，eStarPro率先挺进八强 </a>
+				</div>
+			</div>
+		</div>
+
+        <div class="person-list">
+        	<div class="list-item" style="background: url(img/p1.jpg);"></div>
+        	<div class="list-item" style="background: url(img/p2.jpg);"></div>
+        	<div class="list-item" style="background: url(img/p3.png);"></div>
+        	<div class="list-item" style="background: url(img/p4.jpg);"></div>
+        	<div class="list-item" style="background: url(img/p5.jpg);"></div>
+        	
+        </div>
+        <div class="bottom">
+        	
+        </div>
+	</body>
+    
+</html>

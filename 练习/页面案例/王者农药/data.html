@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>游戏资料</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.main {
+				width: 1200px;
+				margin: 0 auto;
+				line-height: 84px;
+			}
+			
+			.top {
+				height: 84px;
+				background-color: black;
+			}
+			
+			.main>img {
+				float: left;
+			}
+			
+			.top-nav {
+				float: left;
+				color: whitesmoke;
+				font-family: "微软雅黑";
+			}
+			
+			.top-nav-item {
+				float: left;
+				text-decoration: none;
+				color: white
+			}
+			
+			.top-nav-item-c1 {
+				width: 120px;
+				height: 22px;
+				line-height: 22px;
+				padding-top: 25px;
+				text-align: center;
+			}
+			
+			.top-nav-item-c2 {
+				margin-top: 2px;
+				height: 20px;
+				line-height: 20px;
+				padding-bottom: 15px;
+				text-align: center;
+				font-size: 12px;
+			}
+			
+			.top-nav-item:hover {
+				background-color: rgba(243, 194, 88, 0.3);
+				height: 79px;
+				border-bottom: 5px solid orange;
+			}
+			
+			.big-img {
+				height: 817px;
+				background: url(img/bigImg.jpg);
+				position: relative;
+			}
+			
+			.big-bottom {
+				width: 1200px;
+				height: 80px;
+				background-color: #164B6F;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				position: absolute;
+				left: 350px;
+				bottom: 0px;
+			}
+			
+			.bottom-img {
+				margin-left: 5px;
+				margin-top: 5px;
+				width: 224px;
+				height: 69px;
+				float: left;
+			}
+			
+			.hero {
+				width: 1200px;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			
+			.hero-title {
+				font-weight: bold;
+			}
+			
+			.hero-img {
+				margin-top: 20px;
+				width: 1200px;
+				height: 450px;
+			}
+			
+			.hero-img-item {
+				width: 120px;
+				height: 150px;
+				text-align: center;
+				float: left;
+			}
+			
+			.hero-img-item>.item-img {
+				width: 96px;
+				height: 96px;
+				border-top-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+				border: 2px solid #258CF1;
+				transition: all  2s;
+			}
+			.hero-img-item>.item-img:hover{
+				transform: rotateY(180deg);
+			}
+			
+			.hero-img-item>.item-name {
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			
+			.weapon {
+				width: 1200px;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			
+			.weapon-title {
+				font-weight: bold;
+			}
+			
+			.weapon-img {
+				width: 1200px;
+				height: 320px;
+			}
+			
+			.weapon-img-item {
+				margin-top: 20px;
+				width: 120px;
+				height: 150px;
+				text-align: center;
+				float: left;
+			}
+			
+			.weapon-img-item>.item-img {
+				width: 96px;
+				height: 96px;
+				border-radius: 10%;
+				border: 2px solid #258CF1;
+				transition: all  2s;
+			}
+			.weapon-img-item>.item-img:hover{
+				transform: scale(1.3);
+			}
+			.weapon-img-item>.item-name {
+				width: 100px;
+				height: 50px;
+				line-height:50px;
+				text-align: center;
+			}
+			.bottom{
+				margin-top: 20px;
+				width: 1217px;
+				height: 231px;
+				background: url(img/bottom.png);
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--导航条-->
+		<div class="top">
+			<div class="main">
+				<img src="img/logo.png" />
+				<div class="top-nav">
+					<a href="home.html" class="top-nav-item">
+						<div class="top-nav-item-c1">官方网页</div>
+						<div class="top-nav-item-c2">HOME</div>
+					</a>
+					<a href="data.html" class="top-nav-item">
+						<div class="top-nav-item-c1">游戏资料</div>
+						<div class="top-nav-item-c2">DATA</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">内容中心</div>
+						<div class="top-nav-item-c2">CONTENTS</div>
+					</a>
+					<a href="match.html" class="top-nav-item">
+						<div class="top-nav-item-c1">赛事中心</div>
+						<div class="top-nav-item-c2">MATCH</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">百态王者</div>
+						<div class="top-nav-item-c2">CULTURE</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">社区互动</div>
+						<div class="top-nav-item-c2">COMMUNITY</div>
+					</a>
+					<a class="top-nav-item">
+						<div class="top-nav-item-c1">玩家支持</div>
+						<div class="top-nav-item-c2">PLAYER</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<img src="img/logo.png" />
+			<div class="top-nav">
+				<div class="top-nav-item">
+					<div class="top-nav-item-c1">官方网页</div>
+					<div class="top-nav-item-c2">HOME</div>
+				</div>
+				<div class="top-nav-item">
+					<div class="top-nav-item-c1">游戏资料</div>
+					<div class="top-nav-item-c2">DATA</div>
+				</div>
+				<div class="top-nav-item">
+					<div class="top-nav-item-c1">内容中心</div>
+					<div class="top-nav-item-c2">CONTENTS</div>
+				</div>
+				<div class="top-nav-item">
+					<div class="top-nav-item-c1">赛事中心</div>
+					<div class="top-nav-item-c2">MATCH</div>
+				</div>
+				<div class="top-nav-item">
+					<div class="top-nav-item-c1">百态王者</div>
+					<div class="top-nav-item-c2">CULTURE</div>
+				</div>
+				<div class="top-nav-item">
+					<div class="top-nav-item-c1">社区互动</div>
+					<div class="top-nav-item-c2">COMMUNITY</div>
+				</div>
+				<div class="top-nav-item">
+					<div class="top-nav-item-c1">玩家支持</div>
+					<div class="top-nav-item-c2">PLAYER</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="big-img">
+			<div class="big-bottom">
+				<div class="bottom-img" style="background: url(img/120-freehover.png);">
+				</div>
+				<div class="bottom-img" style="background: url(img/146-freehover.png);">
+				</div>
+				<div class="bottom-img" style="background: url(img/174-freehover.png);">
+				</div>
+				<div class="bottom-img" style="background: url(img/176-freehover.png);">
+				</div>
+				<div class="bottom-img" style="background: url(img/178-freehover.png);">
+				</div>
+			</div>
+		</div>
+
+		<div class="hero">
+			<h3 class="hero-title">英雄介紹</h3>
+			<div class="hero-img">
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/不知火舞.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">不知火舞</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/东皇太一.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">东皇太一</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/伽罗.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">伽罗</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/典韦.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">典韦</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/大乔.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">大乔</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/妲己.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">妲己</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/嫦娥.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">嫦娥</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/安其拉.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">安其拉</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/成吉思汗.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">成吉思汗</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/扁鹊.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">扁鹊</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/曹操.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">曹操</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/狄仁杰.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">狄仁杰</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/白起.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">白起</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/百里守约.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">百里守约</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/百里玄策.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">百里玄策</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/盾山.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">盾山</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/程咬金.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">程咬金</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/蔡文姬.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">蔡文姬</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/貂蝉.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">貂蝉</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/达摩.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">达摩</div>
+				</div>
+				<div class="hero-img-item">
+					<div class="item-img" style="background:url(img/阿轲.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">阿轲</div>
+				</div>
+			</div>
+		</div>
+		<div class="weapon">
+			<h3 class="weapon-title">局内兵器</h3>
+			<div class="weapon-img">
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/冲能拳套.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">冲能拳套</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/不死鸟之眼.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">不死鸟之眼</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/光辉之剑.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">光辉之剑</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/冰痕之握.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">冰痕之握</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/冰霜法杖.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">冰霜法杖</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/冰霜长矛.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">冰霜长矛</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/凤鸣指环.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">凤鸣指环</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/博学者之怒.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">博学者之怒</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/大棒.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">大棒</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/奔狼纹章.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">奔狼纹章</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/炽热支配者.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">炽热支配者</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/爆裂之甲.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">爆裂之甲</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/穿云弓.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">穿云弓</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/符文大剑.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">符文大剑</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/纯净苍穹.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">纯净苍穹</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/风之轻语.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">风之轻语</div>
+				</div>
+				<div class="weapon-img-item">
+					<div class="item-img" style="background:url(img/风灵纹章.jpg) no-repeat;background-size: 100%;"></div>
+					<div class="item-name">风灵纹章</div>
+				</div>
+			</div>
+		</div>
+		 <div class="bottom">
+        	
+        </div>
+	</body>
+
+</html>
