@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        div:hover{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <select onchange="alert('内容改变')">
+    <option>选项1</option>
+    <option>选项2</option>
+    <option>选项3</option>
+    </select>
+    <button onclick="alert(123)">按钮</button>
+    <div onmouseenter="console.log('鼠标移入到div中')" onmouseleave="f()">
+    </div>
+    <script>
+        function f(){
+            document.getElementsByTagName('div')[0].innerText='鼠标移出';
+        }
+    </script>
+    <input onchange="alert('输入框内容改变')" onfocus="console.log('获取焦点')"     onblur="console.log('失去焦点')"/>
+</body>
+</html>
