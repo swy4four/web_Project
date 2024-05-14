@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 在元素内部 通过事件绑定的方式 -->
+    <!-- html中on开头的属性都是 事件属性 -->
+    <button onclick="alert(456)">按钮</button>
+    <h1>一级标题</h1>
+    <!-- 内链式脚本 -->
+    <!-- <script>
+        alert(123)
+    </script> -->
+
+    <h2>通过script关联js文件</h2>
+    
+    <!-- <script type="text/javascript" src="../js/hello.js"></script> -->
+
+    <script type="text/javascript" src="../js/hello.js">
+        alert(123)
+    </script>
+</body>
+</html>
