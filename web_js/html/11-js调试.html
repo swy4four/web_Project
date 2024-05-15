@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js调试</title>
+</head>
+<body>
+    <script>
+        function m1(){
+            console.log("m1")
+            console.log("m2" + m2())
+        }
+        function m2(){
+            var i = 0;
+            i ++;
+            console.log(i);
+            m3();
+            console.log("m2结束")
+        }
+        function m3(){
+            
+            console.log("m3开始")
+            return "aa";
+            console.log("m3结束")
+        }
+    </script>
+</body>
+</html>

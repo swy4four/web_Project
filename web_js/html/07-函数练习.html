@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数练习</title>
+</head>
+<body>
+    <script>
+        function div(){
+        let width =prompt("输入宽度");
+        let height =prompt("输入高度");
+        let color =prompt("输入颜色");
+
+        let str=`<div style="width: ${width}px;height:${height}px;background-color:${color}"></div>`;
+        console.log(str)
+        document.write(str);
+    }
+    </script>
+    <button onclick="div()">生成div</button>
+    
+</body>
+</html>

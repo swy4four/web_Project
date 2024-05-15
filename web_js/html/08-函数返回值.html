@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数返回值</title>
+</head>
+<body>
+    <script>
+        //var i = 100;//全局变量
+        var f = function(a,b){
+            
+            //var i = 10;//在函数内部做变量的声明与赋值，则变量为 局部变量
+            i = 10;//只做变量的赋值，不做变量的声明，这个变量则成为全局变量
+            console.log("方法内部 = " +i)
+            return a + b;
+        }
+        var sum = f(i,6);
+        console.log(sum)
+        console.log("方法外部 = " +i)
+        var i;
+    </script>
+</body>
+</html>

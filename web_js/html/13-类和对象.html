@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象</title>
+</head>
+<body>
+     <script>
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+
+            this.play=function (){
+                console.log(this.name+','+this.age+'fuck')
+            }
+        }
+
+        var p1=new Person("张fuck",20);
+        p1.salary=5000;//添加属性
+        console.log(p1);
+        var p2=new Person('孟杰',30);
+        
+        console.log(p2.name);
+
+     </script>
+</body>
+</html>

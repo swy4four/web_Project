@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+</head>
+<body>
+    <script>
+        //闭包 函数内部写函数 内部函数用到了外部返回的变量 外部返回内部函数
+   /*      function f(){
+            let i=0;
+            function m(){
+                i++;
+                return i;
+            }
+        return m;
+        }
+
+        var k=f();
+        console.log(k())
+        console.log(k())
+        console.log(k()) */
+
+        function f(){
+            let i=0;
+            return function() {
+                i++;
+                return i;
+            }
+        }
+
+        var k=f();
+        console.log(k())
+        console.log(k())
+        console.log(k())
+
+
+    </script>
+</body>
+</html>
