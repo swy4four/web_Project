@@ -20,6 +20,10 @@
 			
 			//es5对象属性的遍历
 			for(var i in p ){
+				/*console.log(i,p[i])*/
+				if(typeof p[i] == 'function'){
+					continue;
+				}
 				console.log(i,p[i])
 			}
 			
@@ -35,7 +39,13 @@
 				console.log(i,arr[i]);
 			}*/
 			
+			class Person{
+				
+			}
+			var p1 = new Person();
+			console.log(p1 instanceof String)
 			
+			console.log(typeof p1)
 			
 		</script>
 	</body>
