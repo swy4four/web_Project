@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*input{
+				outline: none;
+			}
+			input:focus{
+				border:1px solid red;
+			}*/
+		</style>
+	</head>
+	<body>
+		<form action="/ss/xxx" method="get" onsubmit="return f();">
+			用户名:<input type="text" name="username"  placeholder="请输入" id="i1"/> <br /><br />  <!--readonly="readonly"-->  <!-- disabled="disabled" -->
+			密码:<input type="password" name="password" id="i2"/> <br /><br />
+			手机号:<input type="text" name="phone" id="i3"/> <br /><br />
+			<!--图片按钮-->
+			<input type="submit"  />
+		</form>
+		<script>
+			
+			function f(){
+				//6-8位,小写字母开头,字母数字下划线
+				var i1 = document.getElementById('i1');
+				var r1 = /^[a-z][0-9a-zA-Z_]{5,7}$/i;
+				console.log(r1.test(i1.value));
+				//6-8位,纯数字
+				
+				var i2 = document.getElementById('i2');
+				var r2 = /\d{6,8}$/i;
+				console.log(r2.test(i2.value))
+				
+				//正常手机号
+				var i3 = document.getElementById('i3');
+				var r3 = /^1[3-9]\d{9}$/i;
+				console.log(r3.test(i3.value))
+				
+				if(r1.test(i1.value) && r2.test(i2.value) &&  r3.test(i3.value)){
+					return true;
+				}else{
+					alert("验证失败");
+					return false;
+				}
+				
+				
+			}
+		</script>
+	</body>
+</html>
+

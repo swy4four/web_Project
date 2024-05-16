@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str = new String('abcdefgcd');
+			console.log(str.charAt(2))
+			console.log(str.charCodeAt(2))
+			str = str.concat('你好');
+			console.log(str)
+			console.log(String.fromCharCode(97, 101, 108, 108, 111))
+			
+			console.log(str.indexOf('cd',3))
+			
+			console.log(str);
+			
+			console.log(str.slice(3,-2));
+			console.log(str.slice(3,str.length-2));
+			
+			str =  "1:2:3:4:5";
+			var arr = str.split(":");
+			console.log(arr);;
+			
+			
+			
+			//封装一个方法,传入任意的字符串,获取请求参数,放到数组中
+		/* 	function f(url){
+				var s = url.slice(url.indexOf("?")  + 1 ,url.length) ;
+				var arr = s.split("&");
+				for(var i of arr){
+					document.write(i+"<br>"
+				}
+			} */
+
+			function f(url){
+				var s=url.slice(url.indexOf("?") + 1 ,url.length);
+				var arr=s.split("&");
+				for(var i of arr){
+					document.write(i+"<br>")
+				} 
+			}
+
+			f("https://wwww.baidu.com?username=张三&age=20&salary=10000");
+			
+			//console.log(str.substr(2,5));
+			/* var str = new String('abcdefgcd');
+			console.log(str.slice(3,-1));
+			console.log(str.substring(3,-1));//参数不允许为负数
+			
+			console.log("aaBBcc".toUpperCase())
+			console.log("aaBBcc".toLowerCase()) */
+		</script>
+	</body>
+</html>

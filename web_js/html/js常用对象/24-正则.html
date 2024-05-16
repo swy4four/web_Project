@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//直接量语法:/pattern/attributes
+			//构造函数:new RegExp(pattern, attributes)
+
+			//var r = new RegExp('java','i');// i 代表忽略大小写比较
+			
+			//var r = /java/i;
+
+			//console.log(r.test("aaJavaScript"));   // 返回 true
+
+			//console.log(r.test("ECMAScript"));   // 返回 false
+	
+	
+			var r = /^a[^a-d]{2,}/i;
+			
+			console.log(r.test("a你D好你好aa"));
+
+		</script>
+	</body>
+</html>

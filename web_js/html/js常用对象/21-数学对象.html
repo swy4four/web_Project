@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*console.log(Math.PI)
+			
+			console.log(Math.abs(-5));
+			console.log(Math.ceil(5.78));
+			console.log(Math.floor(5.78));
+			
+			console.log(Math.max(3,7,2,8,4,6));
+			console.log(Math.min(3,7,2,8,4,6));
+			
+			
+			for(var i = 0;i < 100;i++){
+				console.log(Math.random());
+			}*/
+			
+			//随机数公式
+			//Math.floor(Math.random()*(m - n + 1)+n);
+			
+			
+			var arr = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G'];
+			var s = '';
+			for(var i = 0;i < 4;i++){
+				//console.log(arr[Math.floor(Math.random()*(16 - 0 + 1)+0)])
+				s += arr[Math.floor(Math.random()*(16 - 0 + 1)+0)];
+			}
+			
+			
+		</script>
+		<style>
+			#d1,input{
+				width: 200px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				font-size: 30px;
+				background: rgba(0,0,0,0.5);
+				color: white;
+				text-shadow: 2px 2px yellow;
+				float: left;
+			}
+			input{
+				border: 1px solid red;
+				outline: none;
+				color: red;
+				padding: 0px;
+				background: white;
+				box-sizing: border-box;
+				
+			}
+		</style>
+		<div id="d1">
+			
+		</div>
+		<input type="text" />
+		<script>
+			document.getElementById('d1').innerText = s;
+			
+		</script>
+	</body>
+</html>
