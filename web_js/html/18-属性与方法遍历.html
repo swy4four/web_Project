@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var p = {name:"张三",age:20,play:function(){
+				console.log("爱玩");
+				},
+				id:100
+				,
+				eat:function(){
+					console.log("爱吃");
+				}
+			};
+			
+			console.log(p)
+			
+			//es5对象属性的遍历
+			for(var i in p ){
+				console.log(i,p[i])
+			}
+			
+			
+			var arr = [1,5,7,4,3];
+			
+			//es6 新增的 for of
+			/*for(var i of arr){
+				console.log(i);
+			}*/
+			
+			/*for(var i in arr){
+				console.log(i,arr[i]);
+			}*/
+			
+			
+			
+		</script>
+	</body>
+</html>

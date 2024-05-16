@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			class Person{
+				constructor(name,age){
+					this.name = name;
+					this.age = age;
+					this.score ;
+				}
+				
+				sleep(n){
+					console.log(this.name+ n +"爱睡觉")
+				}
+				static play(){
+					console.log("爱玩")
+				}
+				//es6中的get/set方法不是用来调用的，而是对属性赋值的时候，由js引擎调用
+				get score(){
+					console.log("score被读取");
+					return 100;
+				}
+				set score(s){
+					console.log("score被修改");
+				}
+			}
+			//es6 继承
+			class Child extends Person{
+				constructor(name,age,salary){
+					super(name,age);
+					this.salary = salary;
+				}
+				
+				study(){
+					console.log(this.name+ "薪水是" + this.salary + "爱学习")
+				}
+			}
+			
+			
+			 let c= new Child("张四",20,5000);
+		</script>
+	</body>
+</html>

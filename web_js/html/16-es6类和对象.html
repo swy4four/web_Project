@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6类和对象</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            sleep(namefir){
+                console.log(this.name+namefir+'爱睡觉');
+            }
+            static play(){
+                console.log("爱玩");
+            }
+        }
+
+        var p=new Person('孟杰',19);
+        console.log(p);
+
+        p.sleep('xiaomengjie');
+
+        Person.play()
+    </script>
+</body>
+</html>
