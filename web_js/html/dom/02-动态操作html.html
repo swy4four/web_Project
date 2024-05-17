@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			button{
+				color: orchid;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1" >
+			div
+			<span>span</span>	
+			
+			
+		</div>
+		<button >按钮</button>
+		<script>
+			var d1 = document.getElementById('d1');
+			//var str = d1.innerText;
+			//console.log(str)
+			//d1.innerText = 'hello';
+			
+			document.getElementsByTagName('button')[0].onclick = function(){
+				var str = d1.innerHTML;
+				console.log(str)
+				d1.innerHTML = '<p style="color: pink;background: yellow;">段落</p>';
+			}
+			
+			
+		</script>
+		
+	</body>
+</html>
