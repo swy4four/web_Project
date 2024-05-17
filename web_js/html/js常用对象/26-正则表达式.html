@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*var arr = " plus 2 equals 3 aa 123 bb 33 cc".match(/\d+/g);// 返回 ["1", "2", "3"]
+			 
+			console.log(arr)*/
+			
+			var str = "张三15111111111,李四 14122222222,王五17133333333,赵六15144444444";
+			var r = /1[57]\d{9}/g;
+			
+			//查询检索15和17开头的手机号,放到数组中
+			//console.log (str.match(r));
+			
+			
+			str = str.replace(r,"*");
+			
+			console.log(str)
+		</script>
+		
+	</body>
+</html>

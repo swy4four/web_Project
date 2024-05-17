@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			
+			var str = "张三15111111111,李四 14122222222,王五17133333333,赵六15144444445";
+			var r = /(1)(\d{2})(\d{4})(\d{4})/g;
+			
+			
+			
+			
+			str = str.replace(r,"$1****$4");
+			
+			console.log(str)
+		</script>
+		
+	</body>
+</html>
