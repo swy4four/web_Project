@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单中的按钮操作</title>
+</head>
+
+<body>
+    <fieldset style="width: 500px;">
+        <legend>
+            <label for="all">全选</label>
+            <input type="checkbox" id="all" />
+        </legend>
+        <label for="r1">选项1</label>
+        <input type="checkbox" id="r1" name="select" />
+
+        <label for="r2">选项2</label>
+        <input type="checkbox" id="r2" name="select" />
+
+        <label for="r3">选项3</label>
+        <input type="checkbox" id="r3" name="select" />
+
+        <label for="r4">选项4</label>
+        <input type="checkbox" id="r4" name="select" />
+
+    </fieldset>
+
+    <script>
+        var selectAll = document.getElementsByName('select');
+        all.onclick = function () {
+            for (var i = 0; i < selectAll.length; i++) {
+                selectAll[i].checked = all.checked;
+            }
+        }
+
+        for (var i = 0; i < selectAll.length; i++) {
+            selectAll[i].onclick = function () {//为四个单选按钮添加点击事件
+                var temp = true;
+                for (var j = 0; j < selectAll.length; j++) {//每次点击一个按钮后，判断所有按钮的选中状态
+                    if (!selectAll[j].checked) {//如果有任意一个按钮没有被选中
+                        temp = false;
+                    }
+                }
+
+                all.checked = temp;
+            }
+        }
+    </script>
+</body>
+
+</html>

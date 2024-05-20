@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			ul{
+				list-style-type: none;
+			}
+			div{
+				width: 200px;
+				background: yellow;
+				margin: auto;
+			}
+			p{
+				height: 40px;
+				background: yellowgreen;
+				text-align: center;
+				line-height: 40px;
+				cursor: pointer;
+				color: white;
+			}
+			ul{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<p>
+				Web
+			</p>
+			<ul>
+				<li>HTML</li>
+				<li>Css</li>
+				<li>JavaScript</li>
+				<li>框架</li>
+			</ul>
+			<p>
+				JavaSE
+			</p>
+			<ul>
+				<li>面向对象</li>
+				<li>编程基础</li>
+				<li>API</li>
+				<li>高级课程</li>
+			</ul>
+			<p>
+				JavaEE
+			</p>
+			<ul>
+				<li>Spring</li>
+				<li>SpringMVC</li>
+				<li>mybatis</li>
+				<li>SpringBoot</li>
+			</ul>
+		</div>
+		<script>
+			
+			var ps = d1.getElementsByTagName('p');
+			var uls = d1.getElementsByTagName('ul');
+			
+			for(var i = 0;i < ps.length;i++){
+				ps[i].setAttribute("pid",i);
+				ps[i].onclick = function(){
+					var pid = this.getAttribute("pid");
+					//console.log(uls[pid])
+					
+					if(uls[pid].style.display == 'none'){
+						uls[pid].style.display = 'block';
+					}else{
+						uls[pid].style.display = 'none';
+					}
+				}
+				
+			}
+			
+		</script>
+	</body>
+</html>

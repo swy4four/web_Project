@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="alert(123)">按钮1</button>
+		
+		<button >按钮2</button>
+		<button >按钮3</button>
+		
+		<button >移除监听的事件</button>
+		<script>
+			document.getElementsByTagName('button')[1].onclick = function(){
+				alert(456)
+			}
+			//时间监听
+			document.getElementsByTagName('button')[2].addEventListener('click',f);
+			
+			function f(){
+				alert(789)
+			}
+			
+			document.getElementsByTagName('button')[3].onclick = function(){
+					//移除事件监听
+					document.getElementsByTagName('button')[2].removeEventListener('click',f)
+			}
+		</script>
+	</body>
+</html>

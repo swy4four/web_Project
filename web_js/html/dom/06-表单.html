@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*input{
+				outline: none;
+			}
+			input:focus{
+				border:1px solid red;
+			}*/
+		</style>
+	</head>
+	<body>
+		<form action="/ss/xxx" method="get">
+			用户名:<input type="text" name="wd"  placeholder="请输入"  value="hello"/> <br /><br />  <!--readonly="readonly"-->  <!-- disabled="disabled" -->
+			密码:<input type="password" name="password" id="password"/> <br /><br />
+			<fieldset style="width: 500px;">
+				<legend>单选按钮:</legend>
+				<label for="num1">选项1: </label> 
+				
+				<input type="radio" name="singleselect" value="num1" id="r1"/>  
+				
+				<label for="num2">选项2: </label> 
+				<input type="radio" name="singleselect" value="num2"  checked="checked" id="r2"/>
+			</fieldset>		
+			<input type="submit" />
+
+		</form>
+		<div id="d1">
+			
+		</div>
+		<script>
+			/*console.log(document.forms[0]);//表单的简单取法
+			
+			var wd = document.getElementsByName('wd')[0];
+			console.log(wd.value)
+			wd.value = "tom";*/
+			
+			//console.log(password);//通过id名取元素的简单方式
+			
+			//单一属性，如果值存在为true，否则为false
+			console.log(r1.checked);
+			
+		</script>
+	</body>
+</html>
+

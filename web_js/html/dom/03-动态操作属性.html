@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<p align="center">
+			hello
+		</p>-->
+		
+		<img src="img/off.png" />
+		<script>
+			/*var p = document.getElementsByTagName('p')[0];
+			
+			alert(p.align);
+			
+			p.align = 'left';*/
+			
+			var img = document.getElementsByTagName('img')[0];
+			//console.log(img.src);
+			img.onclick = function(){
+				
+				console.log(img.src.substring(img.src.indexOf('off')))
+				
+				if(img.src.substring(img.src.indexOf('off')) == 'off.png'){
+					img.src = "img/on.png";
+				}else{
+					img.src = 'img/off.png'
+				}
+				
+			}
+			
+		</script>
+	</body>
+</html>

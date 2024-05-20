@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--阻止链接的默认行为-->
+		<a href="JavaScript:f()">超链接</a>
+		<a  href=" 02-动态操作html.html" id="a1">超链接</a>
+		<script>
+			//阻止默认行为
+			document.oncontextmenu = function(e){
+				e.preventDefault();
+			}
+			
+			function f(){
+				console.log('hello')
+			}
+			
+			a1.onclick = function(e){
+				e.preventDefault();
+			}
+		</script>
+	</body>
+</html>
