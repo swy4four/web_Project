@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#d1{
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				margin: auto;
+				padding: 10px;
+				margin-top: 100px;
+			}	
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			
+		</div>
+		<script>
+			console.log(d1.offsetWidth);//内容区+内边距+边框
+			console.log(d1.offsetHeight);
+			
+			console.log(d1.clientWidth);////内容区+内边距
+			console.log(d1.clientHeight)
+			
+			
+			console.log(d1.getBoundingClientRect().width);////内容区+内边距
+			console.log(d1.getBoundingClientRect().height)
+			
+			console.log(d1.offsetTop);//元素距离父元素上边的距离
+			console.log(d1.offsetLeft);//元素距离父元素左边的距离
+			
+		</script>
+		
+		<script>
+//			console.log(document.documentElement)
+//			console.log(document.getElementsByTagName('html')[0])
+			//获取视口大小
+			/*console.log(document.documentElement.clientWidth)
+			console.log(document.documentElement.clientHeight)*/
+			
+			//视口重置事件
+			/*window.onresize = function(){
+				console.log(document.documentElement.clientWidth)
+				console.log(document.documentElement.clientHeight)
+			}*/
+		</script>
+	</body>
+</html>

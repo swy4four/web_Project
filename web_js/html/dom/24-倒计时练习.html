@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+	<button id="btn" disabled="disabled" onclick="alert(123)">按钮还有10秒可以点击</button>
+	<script>
+		/*btn.disabled = true;*/
+		(function () {
+			var i = 10;
+			/*function m(){
+				i --;
+				btn.innerText = `按钮还有${i}秒可以点击`;
+				
+				if(i == 0){
+					btn.innerText = '可点击';
+					btn.disabled = false;
+					clearInterval(tid);
+				}
+			}
+			*/
+			var tid = setInterval(function () {
+				i--;
+				btn.innerText = `按钮还有${i}秒可以点击`;
+
+				if (i == 0) {
+					btn.innerText = '可点击';
+					btn.disabled = false;
+					clearInterval(tid);
+				}
+			}, 1000);
+		})();
+
+
+	</script>
+</body>
+
+</html>

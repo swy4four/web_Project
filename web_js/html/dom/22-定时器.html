@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 500px;
+				height: 100px;
+				background: blue;
+				text-align: center;
+				line-height: 100px;
+				color: red;
+				border: 1px dotted pink;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			
+		</div>
+		<button id="btn">清除定时器</button>
+		<script>
+			var tid = setInterval(m,1000,'hello');//参数1 要执行的代码块，参数2间隔事件，参数3... 要传递给执行函数的参数
+			
+			function m(i){
+				var date = new Date();
+				d1.innerText = date.getFullYear()+'年'+(date.getMonth() + 1)+'月'+date.getDate()+'日-'+date.getHours()+'时'+date.getMinutes()+'分'+date.getSeconds()+'秒';
+				console.log(i)
+			}
+			btn.onclick = function(){
+				clearInterval(tid);//清除定时器
+			}
+			
+	
+			
+			/*var i = 0;
+			setInterval(m,1000);
+			
+			function m(){
+				console.log(i++)
+			}*/
+		</script>
+	</body>
+</html>

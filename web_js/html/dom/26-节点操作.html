@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#d1{
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				margin: auto;
+			}	
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<span id="s1">span</span>
+			123456
+		</div>
+		<script>
+			var d1 = document.getElementById('d1');//元素节点
+			//d1.innerHTML = "<p>段落段落段落</p>"
+			var p = document.createElement("p");//创建元素节点
+			
+			//p.setAttribute("align","center");
+			
+			var  align =  document.createAttribute("align");//创建属性节点
+			align.value = "center";
+			p.setAttributeNode(align);
+			
+			
+			var txt = document.createTextNode("段落段落");//创建文本节点
+			p.appendChild(txt);
+			
+			d1.insertBefore(p,s1);			
+			
+		</script>
+	</body>
+</html>

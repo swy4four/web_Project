@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            textarea{
+                width: 500px;
+                height: 200px;
+                border: 1px solid red;
+                border-radius:10px ;
+                display: block;
+                margin: auto;
+                resize: none;
+                outline: none;
+            }
+            button{
+                display: block;
+                outline: none;
+                border: none;
+                width: 100px;
+                height: 40px;
+                color: white;
+                background: deepskyblue;
+                margin: auto;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+            ul{
+                list-style-type:none ;
+                width: 500px;
+                margin: auto;
+            }
+            li{
+                border: 1px dotted blue;
+                margin-top: 10px;
+            }
+            a{
+                float: right;
+                text-decoration: none;
+                color: red;
+            }
+            #charCount{ /* 新增样式 */
+                text-align: center;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <textarea id="txt" oninput="updateCharCount()"></textarea> <!-- 修改，新增oninput事件监听 -->
+        <div id="charCount">剩余字符数：100</div> <!-- 新增，用于显示剩余字符数 -->
+        <button id="btn">发表评论</button>
+        <ul id="ul">
+        </ul>
+        <script>
+            const maxChars = 100; // 修改，定义最大字符数为100
+            function updateCharCount() { // 新增，定义一个函数用于更新剩余字符数
+                const txtArea = document.getElementById('txt');
+                const charCount = document.getElementById('charCount');
+                const remainingChars = maxChars - txtArea.value.length;
+                if (remainingChars < 0) {
+                    txtArea.value = txtArea.value.substring(0, maxChars); // 阻止超过字符数
+                    charCount.textContent = '已达到字符限制：100';
+                    charCount.style.color = 'red';
+                } else {
+                    charCount.textContent = '剩余字符数：' + remainingChars;
+                    charCount.style.color = 'black';
+                }
+            }
+
+            btn.onclick = function(){
+                var li = document.createElement('li'); //创建li节点
+                
+                if(txt.value == ''){ // 修改，移除长度检查
+                    alert('请输入内容');
+                    return;
+                }
+
+                li.innerHTML = txt.value + '<a href="JavaScript:void(0)">删除</a>';
+                ul.insertBefore(li, ul.children[0]);
+                
+                txt.value = ''; // 新增，清空textarea
+                updateCharCount(); // 新增，更新字符数
+
+                var as = document.getElementsByTagName('a');
+                for(var i = 0; i < as.length; i++){
+                    as[i].onclick = function(){
+                        this.parentNode.remove();
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

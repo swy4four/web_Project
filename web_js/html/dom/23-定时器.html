@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 500px;
+				height: 100px;
+				background: yellow;
+				text-align: center;
+				line-height: 100px;
+				color: red;
+				border: 1px dotted pink;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			
+		</div>
+		<button id="btn">清除定时器</button>
+		<script>
+			var tid = setTimeout(m,1000,'hello','你好');//参数1 要执行的代码块，参数2间隔事件，参数3... 要传递给执行函数的参数
+			
+			function m(i,j){
+				var date = new Date();
+				d1.innerText = date.getFullYear()+'年'+(date.getMonth() + 1)+'月'+date.getDate()+'日-'+date.getHours()+'时'+date.getMinutes()+'分'+date.getSeconds()+'秒';
+				console.log(i)
+				console.log(j)
+			}
+			
+	
+			
+		
+		</script>
+	</body>
+</html>

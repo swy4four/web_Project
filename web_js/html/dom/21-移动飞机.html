@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			img{
+				display: block;
+				width: 177px;
+				height: 219px;
+				position: fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/plane.png" id="plane"/>
+		<script>
+			var plane = document.getElementById('plane');		
+			var clientW = document.documentElement.clientWidth;//视口的宽
+			var clientH = document.documentElement.clientHeight;//视口的高
+			
+			var planeW = plane.clientWidth;//飞机的宽
+			var planeH = plane.clientHeight;//飞机的高
+			
+			
+			plane.style.left = (clientW - planeW)/2 + 'px';
+			plane.style.top = (clientH - planeH)/2 + 'px';
+			
+			//视口重置
+			window.onresize = function(){
+				clientW = document.documentElement.clientWidth;//视口的宽
+				clientH = document.documentElement.clientHeight;//视口的高
+				plane.style.left = (clientW - planeW)/2 + 'px';
+				plane.style.top = (clientH - planeH)/2 + 'px';
+			}
+			
+			document.onkeydown = function(e){
+				var planeY = plane.offsetTop;
+				var planeX = plane.offsetLeft;
+				//向上飞
+				if(e.keyCode == 38){
+					planeY -= 10;
+					
+					if(planeY < 0){
+						planeY = 0
+					}
+				}
+				//向下飞
+				if(e.keyCode == 40){
+					planeY += 10;
+					
+					if(planeY + planeH > clientH){
+						planeY = clientH -planeH;
+					}
+					
+				}
+				//向左飞
+				if(e.keyCode == 37){
+					planeX -= 10;
+					
+					if(planeX < 0){
+						planeX = 0
+					}
+				}
+				//向右飞
+				if(e.keyCode == 39){
+					planeX += 10;
+					
+					if(planeX + planeW > clientW){
+						planeX = clientW -planeW;
+					}
+					
+				}
+				
+				plane.style.top = planeY + "px";
+				plane.style.left = planeX + "px";
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>
