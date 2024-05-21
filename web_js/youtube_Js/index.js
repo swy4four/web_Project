@@ -31,7 +31,7 @@ greet('song'); */
     'color: red; background: yellow; font-size: 24px;'
   )  */
 
-  /* var languages = [
+/* var languages = [
     { name: "JavaScript", fileExtension: ".js" },
     { name: "TypeScript", fileExtension: ".ts" },
     { name: "CoffeeScript", fileExtension: ".coffee" }
@@ -63,9 +63,8 @@ greet('song'); */
   //  : 3
   // "hi bob" */
 
-
-  //构造函数 
-var Vehicle =function(name,model){
+//构造函数
+/* var Vehicle =function(name,model){
     this.name=name;
     this.model=model;
 
@@ -77,4 +76,49 @@ var Vehicle =function(name,model){
 var car1=new Vehicle('bigcar1','big');
 car1.comment();
 console.log(car1);
+ */
+
+/* 2024.5.21 面向对象 */
+
+/* 使用对象字面量 */
+/* const circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1,
+  },
+
+  draw: function () {
+    console.log("draw");
+  },
+};
+
+circle.draw(); */
+
+/* factory funcation 工厂函数 */
+
+/* function createCircle(radius){
+  return{
+    radius,//半径
+    draw: function () {//方法
+      console.log('draw方法');
+    }
+  };
+}
+
+const circle=createCircle(1);
+circle.draw(); */
+
+//构造方法 constructor funcation
+
+/* function Circle(radius){
+  this.radius=radius;
+  this.draw=function(){
+    console.log('it`s draw ');
+  }
+}
+
+const another= new Circle(1);
+console.log(another);
+another.draw(); */
 
