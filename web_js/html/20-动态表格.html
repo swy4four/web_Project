@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#d1{
+				width: 500px;
+				height: 400px;
+				margin: auto;
+				border: 1px solid red;
+			}
+			table{
+				width: 500px;
+				height: 400px;
+				border: 1px solid blueviolet;
+				border-collapse:collapse;
+			}
+			td{
+			
+				border: 1px solid yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			
+		</div>
+		<script>
+			var d1 = document.getElementById('d1');
+			var table = document.createElement('table');
+			for(var i = 0;i < 3;i++){
+				var tr = document.createElement('tr');
+				
+				for(var j = 0;j < 5;j++){
+					var td = document.createElement('td');
+					tr.appendChild(td);
+				}
+				
+				table.appendChild(tr);
+			}
+			
+			d1.appendChild(table)
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="window.close()">关闭窗口</button>
+		<button onclick="window.open('https://www.baidu.com')">打开窗口</button>
+		
+		<script>
+//			BOM核心-window
+//				window对象它具有双重角色，即是通过js访问浏览器窗口的一个接口，又是一个全局对象。这意味着在网页中定义的任何对象，变量和函数，都是window的属性
+
+			//window.alert(123);
+			var i = 10;
+			console.log(window.i);
+			
+			
+			window.onload = function(){
+				timer = window.setInterval("jump()", 1000);
+			}
+			function jump(){
+				window.resizeTo(800, 600);
+			}
+
+			
+		</script>
+	</body>
+</html>

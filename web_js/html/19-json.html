@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var jsonobj = {
+				"weatherinfo": {
+					"city": "北京", // 城市中文名
+					"city_en": "beijing", // 城市英文名
+					"date_y": "2014年5月6日", // 发布日期
+					"date": "四月初八", // 阴历
+					"week": "星期二", // 周信息
+					"fchh": "08", // 信息发布时的整点小时数
+					"index_ag": "极易发" // 感冒指数
+				}
+			}
+		</script>
+		<script>
+			console.log(jsonobj.weatherinfo.city)
+			console.log(jsonobj.weatherinfo.week)
+		</script>
+
+	</body>
+
+</html>

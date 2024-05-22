@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		　<!--　URL的hash也就是锚点(#), 本质上是改变window.location的href属性，我们可以通过直接赋值location.hash来改变href, 但是页面不发生刷新-->
+		<button onclick="location.href='https://baidu.com#aa'">百度</button>
+		<button onclick="location.replace('https://www.jd.com')">京东</button>
+		<button onclick="location.replace('https://google.com')">谷歌</button>
+		<button onclick="location.reload()">刷新页面</button>
+	</body>
+</html>

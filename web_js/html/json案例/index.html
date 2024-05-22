@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>糯米团</title>
+		<style>
+			@import url("css/index.css");
+		</style>
+		<style>
+			table{
+				width: 100%;
+				border: 1px solid blueviolet;
+				border-collapse:collapse;
+			}
+			td{
+			
+				border: 1px solid yellowgreen;
+			}
+			#d1{
+				height: 150px;background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			
+			<div class="info">
+				<span>
+					大连
+				</span>
+				<i>
+					|
+				</i>
+				<span onclick="alert(123)">
+					切换城市
+					<img src="img/arrow-down.PNG" />
+				</span>
+				
+				<span class="info_s3">
+					收藏
+				</span>
+				<i>
+					|
+				</i>
+				<span>
+					关注
+				</span>
+			</div>
+			<div class="logo">
+				<div>
+					<img src="img/logo.PNG" />
+				</div>
+				<div>
+					<div class="input_1">
+						<div>
+							<input type="text" placeholder="完蛋"/>
+							<span>蛋糕</span>
+							<span>按摩团购</span>
+							<span>美食</span>
+						</div>
+						<img src="img/search.PNG"/>
+					</div>
+				</div>
+				<div>
+					<img src="img/mon.PNG" />
+				</div>
+			</div>
+			<div class="nav">
+				<div>
+					全部分类
+				</div>
+				<div>
+					<ul>
+						<li style="background-color: #000000;">首页</li>
+						<li>精选品牌</li>
+						<li>电影</li>
+						<li>酒店</li>
+						<li>首页</li>
+						<li>精选品牌</li>
+						<li>电影</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content_left">
+					<ul>
+						<li>美食  <a href="">精选品牌</a> <a href="">KTV</a>  </li>
+						<li>美食  <a href="">精选品牌</a> <a href="">PPT</a>  </li>
+						<li>美食  <a href="">WPS</a> <a href="">小吃快餐</a>  </li>
+						<li>美食  <a href="">精选品牌</a> <a href="">小吃快餐</a>  </li>
+						<li>美食  <a href="">精选品牌</a> <a href="">小吃快餐</a>  </li>
+						<li>美食  <a href="">麻将</a> <a href="">小吃快餐</a>  </li>
+						<li>美食  <a href="">打球</a> <a href="">小吃快餐</a>  </li>
+						<li style="border-bottom: none;">美食  <a href="">精选品牌</a> <a href="">小吃快餐</a>  </li>
+					</ul>
+				</div>
+				<div class="content_center">
+					<img src="img/banner.jpg"/>
+					<div id="d1">
+						<table id="tab">
+							<tr>
+								<th>城市</th>
+								<th>星期一</th>
+								<th>星期二</th>
+								<th>星期三</th>
+								<th>星期四</th>
+								<th>星期五</th>
+								<th>星期六</th>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="content_right">
+					<img src="img/4.jpg" />
+					<img src="img/right2.PNG" />
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			var weather =  {
+				"weatherinfo": [
+					{
+						"city": "北京", // 城市中文名
+						"temp1": "18℃~26℃", // 今日气温
+						"temp2": "17℃~29℃", // 明日气温
+						"temp3": "18℃~23℃", // 第三日气温
+						"temp4": "13℃~24℃", // 第四日气温
+						"temp5": "15℃~31℃", // 第五日气温
+						"temp6": "14℃~32℃" // 第六日气温
+					},
+					
+					{
+						"city": "天津", // 城市中文名
+						"temp1": "200℃", // 今日气温
+						"temp2": "17℃~29℃", // 明日气温
+						"temp3": "18℃~23℃", // 第三日气温
+						"temp4": "13℃~24℃", // 第四日气温
+						"temp5": "15℃~31℃", // 第五日气温
+						"temp6": "14℃~32℃" // 第六日气温
+					},
+					{
+						"city": "大连", // 城市中文名
+						"temp1": "18℃~26℃", // 今日气温
+						"temp2": "17℃~29℃", // 明日气温
+						"temp3": "18℃~23℃", // 第三日气温
+						"temp4": "13℃~24℃", // 第四日气温
+						"temp5": "15℃~31℃", // 第五日气温
+						"temp6": "14℃~32℃" // 第六日气温
+					}
+				]
+			}
+		</script>
+		
+		<script>
+			
+			var ws = weather.weatherinfo;
+		
+			for(var i = 0;i < ws.length;i++){
+				var tr = document.createElement('tr');
+				
+				for(var j = 0;j < 7;j++){
+					var td = document.createElement('td');
+					if(j == 0){ td.innerText = ws[i].city}
+					else if(j == 1){td.innerText = ws[i].temp1}
+					else if(j == 2){td.innerText = ws[i].temp2}
+					else if(j == 3){td.innerText = ws[i].temp3}
+					else if(j == 4){td.innerText = ws[i].temp4}
+					else if(j == 5){td.innerText = ws[i].temp5}
+					else if(j == 6){td.innerText = ws[i].temp6}
+				
+					
+					tr.appendChild(td);
+				}
+				tab.appendChild(tr);
+				
+			}
+			
+	
+			
+		</script>
+	</body>
+</html>

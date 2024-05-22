@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<pre>
+			一、什么是Ajax
+				AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），
+				指的是一套综合了多项技术的浏览器端网页开发技术。Ajax的概念由杰西·詹姆士·贾瑞特所提出。
+				传统的Web应用允许用户端填写表单（form），当提交表单时就向网页服务器发送一个请求。
+				服务器接收并处理传来的表单，然后送回一个新的网页，但这个做法浪费了许多带宽，
+				因为在前后两个页面中的大部分HTML码往往是相同的。
+				由于每次应用的沟通都需要向服务器发送请求，应用的回应时间依赖于服务器的回应时间。
+				这导致了用户界面的回应比本机应用慢得多。而有了Ajax之后，就可以实现在网页不跳转不刷新的情况下，
+				在网页后台提交数据，部分更新页面内容。
+		</pre> 
+		<script type="text/javascript">
+			// 第一步：创建一个xhr对象(你可以称呼它为小黄人)
+			/*let xhr = null
+			if(window.XMLHttpRequest) {　　 //Firefox、 Opera、 IE7 和其它浏览器使用本地 JavaScript 对象
+				xhr = new XMLHttpRequest();
+			} else {　　 //IE 5 和 IE 6 使用 ActiveX 控件
+				var request = new ActiveXObject("Microsoft.XMLHTTP");
+			}*/
+			
+			let xhr = new XMLHttpRequest()
+			// 第二步：打开请求地址，初始化数据
+			xhr.open("GET", "index.json", true);
+			// 第三步：发送请求数据
+			xhr.send()
+			// 第四步：监听回调函数状态
+			xhr.onreadystatechange = function() {　　
+				if(xhr.readyState === 4 && xhr.status === 200) {　　 // 收到服务器返回的应答结果
+					//console.log(xhr.responseText)
+					var str = xhr.responseText;
+					
+					console.log(JSON.parse(str).weatherinfo)
+				}
+			}
+		</script>
+	</body>
+
+</html>
