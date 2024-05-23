@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        svg{
+            background: #ddd;
+        }
+    </style>
+</head>07_h5_svg.html
+<body>
+    <h1>svg创建元素</h1>
+    <svg id="s2" width="500" height="400">
+        //渐变对象属于一种特效对象
+        <defs>
+            <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="red"></stop>
+                <stop offset="17%" stop-color="orange"></stop>
+                <stop offset="34%" stop-color="yellow"></stop>
+                <stop offset="51%" stop-color="green"></stop>
+                <stop offset="68%" stop-color="cyan"></stop>
+                <stop offset="85%" stop-color="blue"></stop>
+                <stop offset="100%" stop-color="purple"></stop>
+            </linearGradient>
+        </defs>
+        <rect width="400" height="100" x="50" y="150" fill="url(#g3)"></rect>
+        <text font-size="60" y="300" fill="url(#g3)">一段文本</text>
+    </svg>
+	
+	<svg>
+		<image xlink:href="../img/logo.png" width="100" height="50" x="" y=""></image>
+	</svg>
+	
+</body>
+</html>

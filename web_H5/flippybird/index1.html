@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			canvas{
+				display: block;	
+				margin: auto;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas">
+			
+		</canvas>
+		<script>
+			/*
+			var c = document.getElementById("mycanvas");
+			c.width = 800;
+			c.height = 600;
+			var ctx=c.getContext("2d");
+			
+			var img = new Image();
+			img.src = "img/sky.png"; 
+			//图片加载完毕
+			img.onload = function(){	
+				//ctx.drawImage(img,x,y,width,height);
+				ctx.drawImage(img,0,0,800,600);
+			}
+			 */
+			
+			window.onload = function(){
+				init();
+			}
+			var ctx;
+			var bg = new DI(0,0,800,600,'img/bg.png');
+			var up = new DI(0,0,50,250,'img/up.png');
+			var down = new DI(0,350,50,250,'img/down.png');
+			var bird = new DI(0,279,42,32,'img/0.gif');
+			function init(){
+				var c = document.getElementById("mycanvas");
+				c.width = 800;
+				c.height = 600;
+				ctx=c.getContext("2d");
+				bg.draw();
+				up.draw();
+				down.draw();
+				bird.draw();
+			}
+			
+		
+			
+			
+			
+			//图片绘制类
+			function DI(x,y,width,height,src){
+				this.x = x;
+				this.y = y;
+				this.width = width;
+				this.height = height;
+				var img = new Image();
+				img.src = src; 
+				//绘制图片方法
+				this.draw = function(){
+					ctx.drawImage(img,this.x,this.y,this.width,this.height);
+				}
+			}
+		</script>
+	</body>
+</html>

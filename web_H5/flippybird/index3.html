@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			canvas{
+				display: block;	
+				margin: auto;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="mycanvas">
+			
+		</canvas>
+		<script>
+		
+			window.onload = function(){
+				init();
+			}
+			var ctx;
+			var c ;
+			var tid;
+			var bg = new DI(0,0,800,600,'img/bg.png');
+			var up = new DI(0,0,50,250,'img/up.png');
+			var down = new DI(0,350,50,250,'img/down.png');
+			var bird = new DI(10,279,42,32,'img/0.gif');
+			var birdSrc = ["img/0.gif","img/1.gif","img/2.gif"];
+			
+			var birdindex = 0;//计数
+			
+			
+			function init(){
+				c = document.getElementById("mycanvas");
+				c.width = 800;
+				c.height = 600;
+				ctx=c.getContext("2d");
+				tid = setInterval(drawimg,100);
+				document.onkeydown = function(e){
+					if(e.keyCode == 32){
+						bird.y = bird.y - 50;
+					}
+				}
+				
+				
+			}
+			//绘图函数
+			function drawimg(){
+				bg.draw();
+				up.draw();
+				down.draw();
+				bird.draw();
+				circ();
+			}
+			//被循环改变绘图坐标的函数
+			function circ(){
+				//鸟撞到天空
+				if(bird.y <= 0 || bird.y + bird.height >= 600 ){
+					clearInterval(tid);
+					ctx.fillStyle="red";
+					ctx.font="30px Arial";
+					ctx.fillText("game over",200,150);
+				}
+				
+				bird.y = bird.y + 5;
+				
+				//障碍物在画布内
+				if(up.x + up.width > 0 ){
+					up.x = up.x - 10;
+					down.x = down.x - 10;
+				}else{
+					up.x = c.width;
+					down.x = c.width;
+					
+					up.height = 150 + parseInt( 200 * Math.random()); 
+					
+					down.y = up.height  + 100;
+					down.height = c.height - down.y;
+				}
+			
+				
+			}
+		
+			
+			//图片绘制类
+			function DI(x,y,width,height,src){
+				this.x = x;
+				this.y = y;
+				this.width = width;
+				this.height = height;
+				var img = new Image();
+				
+				
+				//if(src.substr(-3) == 'gif'){
+				if(width == 42){	
+					this.draw = function(){
+						
+						birdindex ++;
+						img.src = birdSrc[birdindex % 3];
+						ctx.drawImage(img,this.x,this.y,this.width,this.height);
+					}
+				}else{
+					img.src = src; 
+					//绘制图片方法
+					this.draw = function(){
+						ctx.drawImage(img,this.x,this.y,this.width,this.height);
+					}
+				}
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+            border: 1px solid red;
+        }
+        button {
+            margin: auto;
+            border: none;
+            outline: none;
+            background-color: green;
+            color: white;
+            display: none;
+            width: 100px;
+            height: 40px;
+            margin-top: 10px;
+            line-height: 40px;
+        }
+        div{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>得分: </span><span id="score">0</span>
+    </div>
+    <canvas id="mycanvas"></canvas>
+    <button onclick="location.reload();" id="btn">重新开始</button>
+    
+
+    <script>
+        window.onload = function() {
+            init();
+        }
+
+        var ctx;
+        var c;
+        var tid;
+        var score = 0;
+        var scoreElement = document.getElementById("score");
+        var bg = new DI(0, 0, 800, 600, 'img/bg.png');
+        var up = new DI(800, 0, 50, 250, 'img/up.png');
+        var down = new DI(800, 350, 50, 250, 'img/down.png');
+        var bird = new DI(10, 279, 42, 32, 'img/0.gif');
+        var birdSrc = ["img/0.gif", "img/1.gif", "img/2.gif"];
+        var birdindex = 0;
+
+        function init() {
+            c = document.getElementById("mycanvas");
+            c.width = 800;
+            c.height = 600;
+            ctx = c.getContext("2d");
+            tid = setInterval(drawimg, 80);
+            document.onkeydown = function(e) {
+                if (e.keyCode == 32) {
+                    bird.y = bird.y - 50;
+                }
+                if (e.keyCode == 13 && btn.style.display == "block") {
+                    location.reload();
+                }
+            }
+        }
+
+        function drawimg() {
+            bg.draw();
+            up.draw();
+            down.draw();
+            bird.draw();
+            circ();
+        }
+
+        function circ() {
+            if (bird.y <= 0 || bird.y + bird.height >= 600) {
+                gameOver("撞天空或地面");
+            }
+
+            var upboolean = bird.x + bird.width > up.x && bird.x < up.x + up.width && bird.y > up.y && bird.y < up.y + up.height;
+            var downboolean = bird.x + bird.width > down.x && bird.x < down.x + up.width && bird.y + bird.height > down.y && bird.y + bird.height < down.y + down.height;
+            if (upboolean || downboolean) {
+                gameOver("撞柱子");
+            }
+
+            bird.y = bird.y + 5;
+
+            if (up.x + up.width > 0) {
+                up.x = up.x - 10;
+                down.x = down.x - 10;
+            } else {
+                up.x = c.width;
+                down.x = c.width;
+                up.height = 150 + parseInt(200 * Math.random());
+                down.y = up.height + 100;
+                down.height = c.height - down.y;
+                score++;
+                scoreElement.innerText = score;
+            }
+        }
+
+        function gameOver(reason) {
+            clearInterval(tid);
+            ctx.fillStyle = "red";
+            ctx.font = "30px Arial";
+            ctx.fillText("game over，" + reason, 300, 200);
+            btn.style.display = "block";
+        }
+
+        function DI(x, y, width, height, src) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            var img = new Image();
+
+            if (width == 42) {
+                this.draw = function() {
+                    birdindex++;
+                    img.src = birdSrc[birdindex % 3];
+                    ctx.drawImage(img, this.x, this.y, this.width, this.height);
+                }
+            } else {
+                img.src = src;
+                this.draw = function() {
+                    ctx.drawImage(img, this.x, this.y, this.width, this.height);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
