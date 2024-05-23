@@ -58,6 +58,13 @@
 					if(e.keyCode == 32){
 						bird.y = bird.y - 50;
 					}
+                    // 按回车键重新开始游戏
+					if(e.keyCode == 13){
+						
+                        if(confirm("是否重新开始")){
+                            location.reload();
+                        }
+                  }
 				}
 				
 				
