@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			/*html,body的高度和视口一样*/
+			 html,body{
+				height: 100%;
+			} 
+			h1{
+				color: white;
+				text-align: center;
+				margin-top: 100px;
+				float: left;
+				width: 100%;
+			}
+			ul{
+				float: left;
+				list-style-type: none;
+				margin-top: 100px;
+				height: 100%;
+				width: 100%;
+			}
+			ul li{
+				width: 100%;
+				color: wheat;
+				text-align: center;
+				height: 10%;
+				width: 100%;
+			}
+			div{
+				width: 200px;
+				height: 100%;
+				background-color:rgb(0, 0, 0,0.8) ;
+				position: fixed;
+				left: -200px;
+			}
+			span{
+				display: block;
+				width: 30px;
+				height: 100px;
+				color: white;
+				background: #0cc;
+				position: absolute;
+				right: -30px;
+				top: 400px;
+				cursor: pointer;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>信息展示</h1>
+		
+			<ul>
+				<li>信息1</li>
+				<li>信息2</li>
+				<li>信息3</li>
+				<li>信息4</li>
+				<li>信息5</li>
+				<li>信息6</li>
+			</ul>
+			<span id="s">
+				展开菜单
+			</span>
+		</div>
+		<script type="text/javascript" src="../js/jquery-3.6.3.min.js">
+			
+		</script>
+		<script>
+			$("#s").mouseenter(function(){
+				$(this).parent().animate({'left':'0px'},1000);
+			})
+			$("#s").parent().mouseleave(function(){
+				//逻辑问题
+				$(this).animate({'left':'-200px'},1000);
+			})
+
+		</script>
+	</body>
+</html>

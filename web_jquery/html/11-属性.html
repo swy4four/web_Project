@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.s1{
+				color: red;
+			}
+			.s2{
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<img  src="../img/0.gif"/>
+		<input  type="checkbox" checked id="i1"/>
+		<input  type="text" value="张三"/>
+		
+		<script type="text/javascript" src="../js/jquery-3.6.3.min.js">
+			
+		</script>
+		<div>div</div>
+		<script>
+			//console.log($("img").attr("src","../img/2.gif"));
+			//console.log($('#i1').prop("checked",false));
+			//console.log($('#i1').attr("checked"));
+			
+			// alert($('div').text("hello"))
+			//$('div').html("<h1> hello</h1>");
+			//alert($(":text").val("李四"))
+			//$('div').html("<h1> hello</h1>").css('color','red');
+			
+			/* $('div').addClass("s1 s2");
+			$('div').removeClass("s2"); */
+			$('div').mouseenter(function(){
+				$('div').toggleClass("s2");
+			})
+			
+		</script>
+	</body>
+</html>

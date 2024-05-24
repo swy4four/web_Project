@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			ul{
+				list-style-type: none;
+			}
+			div{
+				width: 200px;
+				background: yellow;
+				margin: auto;
+			}
+			p{
+				height: 40px;
+				background: yellowgreen;
+				text-align: center;
+				line-height: 40px;
+				cursor: pointer;
+				color: white;
+			}
+			ul{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<p>
+				Web
+			</p>
+			<ul>
+				<li>HTML</li>
+				<li>Css</li>
+				<li>JavaScript</li>
+				<li>框架</li>
+			</ul>
+			<p>
+				Web
+				<span>span</span>
+			</p>
+		</div>
+		<script type="text/javascript" src="../js/jquery-3.6.3.js"></script>
+		<script>
+				// console.log($('ul').parent()) 父元素
+				// console.log($('ul').children()) 子元素
+				//console.log($('ul').siblings()) 兄弟元素
+				console.log($('ul').next())
+				
+				console.log($("p").find("span"))
+		</script>
+	</body>
+</html>

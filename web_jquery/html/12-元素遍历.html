@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>信息1</li>
+			<li>信息2</li>
+			<li>信息3</li>
+			<li>信息4</li>
+			<li>信息5</li>
+			<li>信息6</li>
+		</ul>
+		<script type="text/javascript" src="../js/jquery-3.6.3.min.js">
+			
+		</script>
+		<script>
+			let lis = $("li");
+			/* for(var i = 0;i < lis.length;i++){
+				console.log(lis[i])
+			} */
+		/* 	lis.each(function(index,elem){//elem是js对象
+				console.log(index,$(elem).text())
+			}) */
+			
+			$.each(["aa",'bb','cc'],function(index,elem){
+				console.log(index,elem)
+			})
+		</script>
+	</body>
+</html>

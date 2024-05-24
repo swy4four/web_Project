@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title></title>
+			<script type="text/javascript" src="../js/jquery-3.6.3.js"></script>
+		<script>
+			/* 优先加载页面元素 */
+		/* 	$(function(){
+				
+			}) */
+			$(function(){
+				console.log($('button'))
+			})
+			
+			
+			/* $('button').click(function(){
+				alert(123)
+			}); */
+			$(function(){
+				$('span').mouseenter(function(){
+					alert('span');
+				})
+			})
+			
+		</script>
+	</head>
+	<body>
+		<span>span</span>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+		<button>按钮</button>
+	<!-- 	<script>
+			console.log($('button'))
+		
+		</script> -->
+	</body>
+</html>

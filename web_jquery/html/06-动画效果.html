@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/jquery-3.6.3.js"></script>
+		<div style="display: none">
+			Hello
+		</div>
+		<button>展开</button>
+		<button>隐藏</button>
+		<button>切换</button>
+		<script>
+			var bs = $('button');
+			
+			/* bs.eq(0).click(function(){
+				$("div").show(1000);
+			})
+			bs.eq(1).click(function(){
+				$("div").hide(1000);
+			}) */
+			//callback 回调函数是一种特殊的函数，它作为参数传递给另一个函数，并在被调用函数执行完毕后被调用
+			 bs.eq(0).click(function(){
+				$("div").slideDown(1000,function(){
+					alert('执行完毕');
+				});
+			})
+			bs.eq(1).click(function(){
+				$("div").slideUp(1000);
+			}) 
+			
+			bs.eq(2).click(function(){
+				$("div").slideToggle(1000);
+			})
+			
+			
+		/* 	bs.eq(0).click(function(){
+				$("div").fadeIn(5000);
+			})
+			bs.eq(1).click(function(){
+				$("div").fadeOut(5000);
+			})
+			
+			bs.eq(2).click(function(){
+				$("div").fadeToggle(5000);
+			}) */
+			
+			
+			
+		</script>
+	</body>
+</html>

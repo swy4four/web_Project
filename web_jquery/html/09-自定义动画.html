@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				border: 1px solid red;
+				width: 100px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/jquery-3.6.3.min.js">
+		</script>
+
+		<button id="go"> Run</button><button id="stop">停止!</button>
+		<div id="block1">Hello!</div>
+		<div id="block2">Hello!</div>
+		
+		<script>
+			var obj1 = {
+			  width: "90%"
+			}
+			var obj2 = {
+			  height: "500px"
+			}
+			// 在一个动画中同时应用三种类型的效果
+			$("#go").click(function(){
+			  /* $("#block1").animate(obj1, 5000,function(){
+				 $("#block2").animate(obj2, 5000)
+			  } ); */
+				 $("#block1").delay(2000).animate(obj1, 5000,function(){
+								
+				  });
+				$("#block2").animate(obj2, 5000) 
+			});
+			
+			$("#stop").click(function(){
+			  $("#block1").stop();
+			  $("#block2").stop();
+			});
+		</script>
+	</body>
+</html>
