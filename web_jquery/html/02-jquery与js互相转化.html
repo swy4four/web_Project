@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript" src="../js/jquery-3.6.3.js">
+			
+		</script> 
+		
+	
+		
+		<div id="d1">
+			123
+		</div>
+		<div>
+			456
+		</div>
+		<div>
+			789
+		</div>
+		<script>
+			console.log($('div'))
+			var d1 = document.getElementById('d1');
+			$(d1).css('color','red');//js对象转jq对象
+			$('div')[1].innerText = '你好';
+			
+			
+			$($('div').get(2)).text('jquery很好学')////jq对象转js对象
+		</script>
+	</body>
+</html>

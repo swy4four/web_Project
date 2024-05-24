@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			table{
+				border: 1px solid red;
+				margin: auto;
+				width: 200px;
+				
+			}
+			td{
+				border: 1px solid yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			123
+		</div>
+		<div class="c2">
+			456
+		</div>
+		<table>
+		  <tr><td class="c1">Header 1</td></tr>
+		  <tr><td>Value 2</td></tr>
+		  <tr><td class="c1">Value 3</td></tr>
+		  <tr><td class="c1">Header 4</td></tr>
+		  <tr><td class="c1">Value 5</td></tr>
+		  <tr><td class="c1">Value 6</td></tr>
+		</table>
+		<script type="text/javascript" src="../js/jquery-3.6.3.js">
+			
+		</script> 
+		<script>
+			//去除所有与给定选择器匹配的元素
+			//$("div:not(.c2)").css('color','red')
+			
+			 //$(".c1:even").css('background','yellow');
+			// $("tr:odd").css('background','yellow');
+			
+			//匹配给定索引值的元素
+			//$("tr:eq(1)").css('background','yellow'); //$($("tr")[1]).css('background','yellow');
+			//$("tr").eq(1).css('background','pink');
+			
+			
+			//$("tr:gt(2)").css('color','red');//匹配所有大于给定索引值的元素
+			//$("tr:lt(2)").css('color','green');//匹配所有小于给定索引值的元素
+			
+			$("tr:contains('Header')").css('background','yellow');
+		</script>
+	</body>
+</html>
