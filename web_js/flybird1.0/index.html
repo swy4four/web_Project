@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird 1.0</title>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+            border: 1px solid red;
+        }
+
+        button {
+            margin: auto;
+            border:none;/* 移除了按钮的边框。 */
+            outline: none;/* 移除了按钮的轮廓线 */
+            background-color: green;
+            color: white;
+            /* display: none; */  /* 初始时不显示 */
+            width: 100px;
+            height: 40px;
+            margin-top: 10px;
+            line-height: 40px;
+            display: block; /* 确保按钮为块级元素 */
+        }
+
+        div {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: blueviolet;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <span>当前得分:</span>
+        <span id="score">
+            0
+        </span>
+    </div>
+
+    <canvas id="mycanvas"></canvas>
+    <button onclick="location.reload();" id="btn">重新开始</button>
+    <!-- game.js -->
+    <script src="game.js"></script>
+</body>
+
+</html>
