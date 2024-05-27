@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background: yellow;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script type="text/javascript" src="../js/jquery-3.6.3.min.js">
+			
+		</script>
+		<div tabindex="1">
+			
+		</div>
+		<script>
+			/* $('div').mousedown(function(e){//e事件对象
+				alert(e.which);//获取鼠标按键键码
+			}) */
+			
+			/* $('div').keydown(function(e){
+				//alert(e.which);//获取键盘按键键码
+				alert(e.target)
+			}) */
+			$('div').mousemove(function(e){//e事件对象
+				// document.title = e.pageX + "，" + e.pageY
+				//document.title = e.offsetX + "，" + e.offsetY
+				document.title = e.clientX + "，" + e.clientY
+			})
+			
+		</script>
+	</body>
+</html>

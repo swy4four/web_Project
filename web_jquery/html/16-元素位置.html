@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+				
+				
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				background: yellow;
+			/* 	margin: auto; */
+				/* position: absolute; */
+				/* top: 100px; */
+			/* 	left: 200px; */
+				/* margin-left: 300px; */
+			}
+			p{
+				width: 100px;
+				height: 100px;
+				/* margin-left:10px ; */
+				position: absolute;
+				left: 100px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>
+				
+			</p>
+		</div>
+		<script type="text/javascript" src="../js/jquery-3.6.3.min.js">
+			
+		</script>
+		
+		<script>
+			//console.log($('div').offset().top + ","+$('div').offset().left )
+			console.log($('p').position().top + ","+$('p').position().left )
+		</script>
+		
+	</body>
+</html>

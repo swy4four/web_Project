@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 盒子样式 */
+			.box {
+				
+				width: 400px;
+				border: 1px solid #000000;
+			}
+			/* 输入内容位置 */
+			.txt {
+				margin-top: 30px;
+			}
+			/* ul列表修饰 */
+			ul {
+				margin-left: 30px;
+				top: 0px;
+				left: 0px;
+			}
+			/* a标签位置修饰 */
+			a {
+				float: right;
+			}
+			/* 列表li的修饰 */
+			ul li {
+				width: 244px;
+				border-bottom: 1px solid #00FF7F;
+				list-style: none;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-3.6.3.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				// 点击发布按钮，动态创建一个小li 添加文本框内容和删除按钮 并且添加到ul中
+				$(".btn").on("click", function() {
+					var li = $("<li></li>");
+					li.html($(".txt").val() + "<a href='javascript:;'>删除</a>");
+					$("ul").append(li);
+					li.slideDown();
+					$(".txt").val("");
+				})
+				// 2.点击删除按钮 可以删除当前的微博留言li
+				// on动态绑定事件
+				$("ul").on("click","a",function(){
+					$(this).parent("li").slideUp(function(){
+						// 当前this指的是li
+						$(this).remove();
+					});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box" id="weibo">
+			<span>微博发布</span>
+			<textarea rows="10" cols="30" class="txt"></textarea>
+			<button type="button" class="btn">发布</button>
+			<ul>
+ 
+			</ul>
+		</div>
+	</body>
+</html>

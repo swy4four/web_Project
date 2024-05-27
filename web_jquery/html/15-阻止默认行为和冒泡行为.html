@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+	  <script type="text/javascript" src="../js/jquery-3.6.3.min.js">
+	  	
+	  </script>
+      <a href="http://jquery.com">default click action is prevented</a>
+      <div id="d1" style="width: 200px; height: 200px; background: yellow;margin: auto;"  onclick="alert(11111)">
+		  <div id="d2"  style="width: 100px; height: 100px; background: pink;margin: auto;" >
+			  
+		  </div>
+	  </div>
+       <script>
+            $("a").click(function(event) {
+               event.preventDefault();
+             // $('<div/>').append('default ' + event.type + ' prevented').appendTo('#log');
+             });
+			 
+			 $(document).contextmenu(function(e){
+				 alert(123)
+				  event.preventDefault();
+			 })
+			 
+			 $('#d2').click(function(e){
+				 alert(22222);
+				 //e.stopPropagation();
+				  return false;//阻止事件的冒泡行为
+			 })
+       </script>
+    </body>
+  </html>

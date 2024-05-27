@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.item {
+				width: 100px;
+				height: 100px;
+				background: #00CCCC;
+				border-radius: 50%;
+				display: inline-block;
+				text-align: center;
+				line-height: 100px;
+				cursor:pointer;
+			}			
+		</style>
+	</head>
+	<body>
+		<input type="button" value="添加元素" id="btn1"/>
+		<div id="container">
+			<div class="item">div1</div>
+			<div class="item">div2</div>
+			<div class="item">div3</div>
+		</div>
+		
+		<script>
+			window.onload = function() {
+				
+				//父容器对象
+				var container = document.getElementById('container');				
+				//获得所有的.item元素
+				var items = container.getElementsByTagName('div');
+				//获得按钮对象
+				var btn1 = document.getElementById('btn1');				
+				
+				//给container父元素添加事件
+				container.onclick = function(e) {
+					
+					//获得事件对象
+					e = e || window.event;
+					
+					//获得事件源对象
+					var currObj = e.target || e.srcElement;
+					console.log(currObj)
+					//判断点击的是不是item元素
+					if(currObj.className != 'item')
+						return;
+					
+					alert(currObj.innerHTML);					
+				}
+								
+				var i = 3;//计数变量
+								
+				//单击事件
+				btn1.onclick = function() {					
+					//动态创建div元素
+					var div = document.createElement('div');					
+					//属性赋值
+					div.className = 'item';
+					//设置内容
+					div.innerHTML = 'div' + ++i;
+					//加入到container中
+					container.appendChild(div);	
+				}				
+				
+			}			
+		</script>
+		
+	</body>
+</html>
