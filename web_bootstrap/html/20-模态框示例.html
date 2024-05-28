@@ -1,113 +1,141 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-		<script type="text/javascript" src="../js/jquery-3.6.3.js"></script>
-		<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
-	</head>
-	<body>
-		
-		
-		<div class="container">
-			<h1>
-				<ul class="breadcrumb">
-				    <li><a href="#">人资系统</a></li>
-				    <li><a href="#">员工模块</a></li>
-				    <li class="active">数据显示</li>
-				</ul>
-			</h1>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title">展示数据</h3>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="../js/jquery-3.6.3.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+
+	<div class="container">
+		<h1>
+			<ul class="breadcrumb">
+				<li><a href="#">人资系统</a></li>
+				<li><a href="#">员工模块</a></li>
+				<li class="active">数据显示</li>
+			</ul>
+		</h1>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">展示数据</h3>
+			</div>
+			<div class="panel-body">
+
+				<div class="">
+					<table class="table  table-hover table-responsive">
+						<thead>
+							<tr>
+								<th>用户</th>
+								<th>薪水</th>
+								<th>编辑</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>张三</td>
+								<td>5000</td>
+								<td> <button type="button" class="btn btn-success" data-toggle="modal"
+										data-target="#myModal">编辑</button> </td>
+							</tr>
+							<tr>
+								<td>李四</td>
+								<td>10000.0</td>
+								<td> <button type="button" class="btn btn-success" data-toggle="modal"
+										data-target="#myModal">编辑</button> </td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<div class="panel-body">
 
-					<div class="">
-						<table class="table  table-hover table-responsive">
-							<thead>
-								<tr>
-									<th>用户</th>
-									<th>薪水</th>
-									<th>编辑</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>张三</td>
-									<td>5000</td>
-									<td> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">编辑</button> </td>
-								</tr>
-								<tr>
-									<td>李四</td>
-									<td>10000.0</td>
-									<td> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">编辑</button> </td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+			</div>
+		</div>
+	</div>
 
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						数据编辑
+					</h4>
+				</div>
+				<div class="modal-body">
+
+					<!-- 表单区域 -->
+
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="username" class="col-sm-2 control-label">姓名</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="username" placeholder="请输入名字">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="salary" class="col-sm-2 control-label">薪水</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="salary" placeholder="请输入薪水">
+							</div>
+						</div>
+
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					</button>
+					<button type="button" class="btn btn-primary">
+						提交更改
+					</button>
 				</div>
 			</div>
 		</div>
-		
-		<!-- 模态框（Modal） -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-						</button>
-						<h4 class="modal-title" id="myModalLabel">
-							数据编辑
-						</h4>
-					</div>
-					<div class="modal-body">
-						
-						<!-- 表单区域 -->
-						
-						<form class="form-horizontal" role="form">
-						  <div class="form-group">
-						    <label for="username" class="col-sm-2 control-label">姓名</label>
-						    <div class="col-sm-10">
-						      <input type="text" class="form-control" id="username" placeholder="请输入名字">
-						    </div>
-						  </div>
-						  
-						  <div class="form-group">
-						    <label for="salary" class="col-sm-2 control-label">薪水</label>
-						    <div class="col-sm-10">
-						      <input type="text" class="form-control" id="salary" placeholder="请输入薪水">
-						    </div>
-						  </div>
-						
-						
-						
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
-						</button>
-						<button type="button" class="btn btn-primary">
-							提交更改
-						</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-		
-		<script>
-			$('td button').click(function(){
-				console.log($(this).parent().parent().find('td').eq(0).text())
-				console.log($(this).parent().parent().find('td').eq(1).text())
-				
-				$('#username').val($(this).parent().parent().find('td').eq(0).text());
-				$('#salary').val($(this).parent().parent().find('td').eq(1).text());
-			})
-			
-		</script>
+	</div>
 
-	</body>
+	<script>
+		$('td button').click(function () {
+			console.log($(this).parent().parent().find('td').eq(0).text())
+			console.log($(this).parent().parent().find('td').eq(1).text())
+
+			$('#username').val($(this).parent().parent().find('td').eq(0).text());
+			$('#salary').val($(this).parent().parent().find('td').eq(1).text());
+		})
+
+	</script>
+
+<script>
+    var currentRow;  // 用于存储当前正在编辑的行
+
+    $('td button').click(function () {
+        currentRow = $(this).closest('tr');  // 存储当前行引用
+        var name = currentRow.find('td').eq(0).text();
+        var salary = currentRow.find('td').eq(1).text();
+
+        $('#username').val(name);
+        $('#salary').val(salary);
+    });
+
+    $('.btn-primary').click(function () {
+        // 获取模态框中的值
+        var newName = $('#username').val();
+        var newSalary = $('#salary').val();
+
+        // 更新表格中的数据
+        currentRow.find('td').eq(0).text(newName);
+        currentRow.find('td').eq(1).text(newSalary);
+
+        // 关闭模态框
+        $('#myModal').modal('hide');
+    });
+</script>
+</body>
 
 </html>
