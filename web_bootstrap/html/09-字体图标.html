@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		 <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		 <script>
+			document.addEventListener('DOMContentLoaded', function () {
+				// 获取按钮和显示计数的标签
+				var button = document.getElementById('likeButton');
+				var countSpan = document.getElementById('count');
+	
+				// 初始化计数
+				var count = 0;
+	
+				// 点击按钮时增加计数并更新显示
+				button.addEventListener('click', function() {
+					count++;  // 增加计数
+					countSpan.textContent = count;  // 更新显示的计数
+				});
+			});
+		</script>
+	</head>
+	<body>
+		
+		<div class="container">
+				<button type="button" class="btn btn-success" style="outline: none;" id="likeButton">
+				    <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp; &nbsp;&nbsp;&nbsp;<span class="badget" id="count">0</span>
+				</button>
+
+			
+		</div>
+		
+	</body>
+</html>
