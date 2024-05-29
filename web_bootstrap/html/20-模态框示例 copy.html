@@ -25,7 +25,6 @@
 				<h3 class="panel-title">展示数据</h3>
 			</div>
 			<div class="panel-body">
-
 				<div class="">
 					<table class="table  table-hover table-responsive">
 						<thead>
@@ -44,14 +43,13 @@
 							</tr>
 							<tr>
 								<td>李四</td>
-								<td>10000.0</td>
+								<td>10000</td>
 								<td> <button type="button" class="btn btn-success" data-toggle="modal"
 										data-target="#myModal">编辑</button> </td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -85,9 +83,6 @@
 								<input type="text" class="form-control" id="salary" placeholder="请输入薪水">
 							</div>
 						</div>
-
-
-
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
@@ -101,56 +96,26 @@
 	</div>
 
 	<script>
-		var currentRow;  // 用于存储当前正在编辑的行
 		$('td button').click(function () {
-			currentRow = $(this).parent().parent();  // 使用 parent().parent() 存储当前行引用
-			var name = currentRow.find('td').eq(0).text();  // 获取当前行第一列（姓名）
-			var salaryN = currentRow.find('td').eq(1).text();  // 获取当前行第二列（薪水）
-			$('#username').val(name);
-			$('#salary').val(salaryN);
+			console.log($(this).parent().parent().find('td').eq(0).text())
+			console.log($(this).parent().parent().find('td').eq(1).text())
+
+			$('#username').val($(this).parent().parent().find('td').eq(0).text());
+			$('#salary').val($(this).parent().parent().find('td').eq(1).text());
 		})
 
-		//提交更改
-		$('.btn-primary').click(function () {
-			// 获取模态框中的值
-			var newName = $('#username').val();  // 从模态框中获取新的姓名
-			var newSalary = $('#salary').val();  // 从模态框中获取新的薪水
-
-			// 更新表格中的数据
-			currentRow.find('td').eq(0).text(newName);  // 更新当前行第一列（姓名）
-			currentRow.find('td').eq(1).text(newSalary);  // 更新当前行第二列（薪水）
-
-			// 关闭模态框
-			$('#myModal').modal('hide');  // 使用 Bootstrap 的方法关闭模态框
-		});
 	</script>
 
-	<!-- <script>
-    var currentRow;  // 用于存储当前正在编辑的行
+<script>
+	//保存修改
+	var currentRow; //用于存储编辑行内容
 
-    $('td button').click(function () {
-        currentRow = $(this).parent().parent();  // 使用 parent().parent() 存储当前行引用
-        var name = currentRow.find('td').eq(0).text();  // 获取当前行第一列（姓名）
-        var salaryN = currentRow.find('td').eq(1).text();  // 获取当前行第二列（薪水）
+	$('td button').click(function(){
 
-        $('#username').val(name);  // 设置模态框中的姓名输入框
-        $('#salary').val(salary);  // 设置模态框中的薪水输入框
-    });
+	})
 
-	//提交更改
-    $('.btn-primary').click(function () {
-        // 获取模态框中的值
-        var newName = $('#username').val();  // 从模态框中获取新的姓名
-        var newSalary = $('#salary').val();  // 从模态框中获取新的薪水
-
-        // 更新表格中的数据
-        currentRow.find('td').eq(0).text(newName);  // 更新当前行第一列（姓名）
-        currentRow.find('td').eq(1).text(newSalary);  // 更新当前行第二列（薪水）
-
-        // 关闭模态框
-        $('#myModal').modal('hide');  // 使用 Bootstrap 的方法关闭模态框
-    });
-</script> -->
+	//提交修改
+</script>
 </body>
 
 </html>
